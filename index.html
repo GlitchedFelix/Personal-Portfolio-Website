@@ -600,6 +600,25 @@
       align-items: end;
     }
 
+    /* ── PROJECT SUBSECTIONS ── */
+    .subsection-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-d);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .projects-group {
+      margin-bottom: 3.5rem;
+    }
+    .projects-group:last-child {
+      margin-bottom: 0;
+    }
+
     /* ── CONTACT ── */
     #contact {
       border-top: 1px solid var(--border);
@@ -774,121 +793,156 @@
       <div class="divider reveal reveal-delay-1"></div>
       <p class="section-sub reveal reveal-delay-2">A glance at what I've been designing and building.</p>
 
-      <div class="projects-grid">
+      <!-- ── Automation & Tools ── -->
+      <div class="projects-group">
+        <p class="subsection-label reveal">Automation &amp; Tools</p>
+        <div class="projects-grid">
 
-        <!-- FEATURED: LogiFleet -->
-        <div class="project-card featured reveal">
-          <div class="project-top">
-            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
-              <span class="project-type-badge badge-auto">Automation</span>
-              <span class="project-type-badge badge-auto" style="color:var(--red);background:rgba(244,63,94,0.08);border-color:rgba(244,63,94,0.2);">Tooling</span>
+          <!-- FEATURED: LogiFleet -->
+          <div class="project-card featured reveal">
+            <div class="project-top">
+              <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+                <span class="project-type-badge badge-auto">Automation</span>
+                <span class="project-type-badge badge-auto" style="color:var(--red);background:rgba(244,63,94,0.08);border-color:rgba(244,63,94,0.2);">Tooling</span>
+              </div>
+              <span class="featured-badge">★ Featured</span>
             </div>
-            <span class="featured-badge">★ Featured</span>
-          </div>
-          <h3 class="project-title">LogiFleet — Driver Compliance Tracker &amp; Chrome Extension</h3>
-          <div class="featured-body">
-            <div>
-              <p class="project-desc">
-                A full two-part internal tool built to manage driver onboarding compliance.
-                The web app tracks each driver's compliance documents with a checklist interface,
-                per-driver progress bars, and a live dashboard showing onboarded, pending, and
-                rejected totals. The companion Chrome extension scrapes the driver list directly
-                from a third-party admin panel and syncs it into the tracker with a single click —
-                replacing a fully manual copy-and-retype workflow entirely.
-              </p>
-              <div class="project-stack" style="margin-top:1rem;">
-                <span class="stack-tag">JavaScript ES6</span>
-                <span class="stack-tag">Chrome Extensions API</span>
-                <span class="stack-tag">DOM Scraping</span>
-                <span class="stack-tag">Bootstrap 5</span>
-                <span class="stack-tag">HTML5</span>
+            <h3 class="project-title">LogiFleet — Driver Compliance Tracker &amp; Chrome Extension</h3>
+            <div class="featured-body">
+              <div>
+                <p class="project-desc">
+                  A full two-part internal tool built to manage driver onboarding compliance.
+                  The web app tracks each driver's compliance documents with a checklist interface,
+                  per-driver progress bars, and a live dashboard showing onboarded, pending, and
+                  rejected totals. The companion Chrome extension scrapes the driver list directly
+                  from a third-party admin panel and syncs it into the tracker with a single click —
+                  replacing a fully manual copy-and-retype workflow entirely.
+                </p>
+                <div class="project-stack" style="margin-top:1rem;">
+                  <span class="stack-tag">JavaScript ES6</span>
+                  <span class="stack-tag">Chrome Extensions API</span>
+                  <span class="stack-tag">DOM Scraping</span>
+                  <span class="stack-tag">Bootstrap 5</span>
+                  <span class="stack-tag">HTML5</span>
+                </div>
+              </div>
+              <div class="project-links" style="flex-direction:column;min-width:150px;">
+                <a href="#contact" target="" class="proj-link primary">Contact for Live Demo</a>
+                <a href="https://github.com/GlitchedFelix/LogiFleet-Tracker-Extention" target="_blank" class="proj-link ghost">GitHub</a>
               </div>
             </div>
-            <div class="project-links" style="flex-direction:column;min-width:150px;">
-              <a href="#contact" target="" class="proj-link primary">Contact for Live Demo</a>
-              <a href="https://github.com/GlitchedFelix/LogiFleet-Tracker-Extention" target="_blank" class="proj-link ghost">GitHub</a>
-            </div>
           </div>
-        </div>
 
-      
-        <!-- InvoiceForge -->
-        <div class="project-card reveal reveal-delay-1">
-          <div class="project-top">
-            <span class="project-type-badge badge-auto">Automation</span>
-          </div>
-          <h3 class="project-title">InvoiceForge</h3>
-          <p class="project-desc">
-            A browser-based data pipeline that transforms raw logistics manifests into clean, grouped,
-            invoice-ready Excel outputs. Applies fuzzy matching to deduplicate records, group by customer
-            and delivery address, and split output by delivery company — eliminating hours of manual
-            reconciliation each week. Runs entirely client-side, no data leaves the browser.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">JavaScript ES6</span>
-            <span class="stack-tag">SheetJS</span>
-            <span class="stack-tag">ExcelJS</span>
-            <span class="stack-tag">Bootstrap 5</span>
-            <span class="stack-tag">Fuzzy Matching</span>
-          </div>
-          <div class="project-links">
-            <a href="https://glitchedfelix.github.io/InvoiceForge/" target="_blank" class="proj-link primary">Live App →</a>
-            <a href="https://github.com/GlitchedFelix/InvoiceForge" target="_blank" class="proj-link ghost">GitHub</a>
-          </div>
-        </div>
-
-        <!-- Graphic Designer Portfolio -->
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-top">
-            <span class="project-type-badge badge-web">Website</span>
-          </div>
-          <h3 class="project-title">Graphic Designer's Portfolio</h3>
-          <p class="project-desc">
-            A clean, mobile-first portfolio page built to showcase a graphic designer's work,
-            with a focus on simplicity and visual impact. Responsive layout built with Bootstrap 5.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">HTML5</span>
-            <span class="stack-tag">CSS3</span>
-            <span class="stack-tag">Bootstrap 5</span>
-            <span class="stack-tag">AI-Assisted</span>
-          </div>
-          <div class="project-links">
-            <a href="https://amorei-botes-portfolio.netlify.app/" target="_blank" class="proj-link primary">View Portfolio →</a>
-          </div>
-        </div>
-
-         <!-- FleetLedger -->
-        <div class="project-card reveal reveal-delay-3">
-          <div class="project-top">
-            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <!-- InvoiceForge -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-top">
               <span class="project-type-badge badge-auto">Automation</span>
-              <span class="project-type-badge badge-auto" style="color:var(--red);background:rgba(244,63,94,0.08);border-color:rgba(244,63,94,0.2);">Tooling</span>
+            </div>
+            <h3 class="project-title">InvoiceForge</h3>
+            <p class="project-desc">
+              A browser-based data pipeline that transforms raw logistics manifests into clean, grouped,
+              invoice-ready Excel outputs. Applies fuzzy matching to deduplicate records, group by customer
+              and delivery address, and split output by delivery company — eliminating hours of manual
+              reconciliation each week. Runs entirely client-side, no data leaves the browser.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">JavaScript ES6</span>
+              <span class="stack-tag">SheetJS</span>
+              <span class="stack-tag">ExcelJS</span>
+              <span class="stack-tag">Bootstrap 5</span>
+              <span class="stack-tag">Fuzzy Matching</span>
+            </div>
+            <div class="project-links">
+              <a href="https://glitchedfelix.github.io/InvoiceForge/" target="_blank" class="proj-link primary">Live App →</a>
+              <a href="https://github.com/GlitchedFelix/InvoiceForge" target="_blank" class="proj-link ghost">GitHub</a>
             </div>
           </div>
-          <h3 class="project-title">FleetLedger — Owner Dashboard</h3>
-          <p class="project-desc">
-            A full-stack owner-operator dashboard for tracking trip income, expenses, and profitability.
-            Logs deliveries and OTO trips against a live rate card, auto-calculates payouts, tracks expenses
-            by category, and visualises monthly trends and 3-month projections. Backed by Supabase.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">JavaScript ES6</span>
-            <span class="stack-tag">Supabase</span>
-            <span class="stack-tag">Chart.js</span>
-            <span class="stack-tag">HTML5</span>
-            <span class="stack-tag">CSS3</span>
+
+          <!-- FleetLedger -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-top">
+              <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+                <span class="project-type-badge badge-auto">Automation</span>
+                <span class="project-type-badge badge-auto" style="color:var(--red);background:rgba(244,63,94,0.08);border-color:rgba(244,63,94,0.2);">Tooling</span>
+              </div>
+            </div>
+            <h3 class="project-title">FleetLedger — Owner Dashboard</h3>
+            <p class="project-desc">
+              A full-stack owner-operator dashboard for tracking trip income, expenses, and profitability.
+              Logs deliveries and OTO trips against a live rate card, auto-calculates payouts, tracks expenses
+              by category, and visualises monthly trends and 3-month projections. Backed by Supabase.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">JavaScript ES6</span>
+              <span class="stack-tag">Supabase</span>
+              <span class="stack-tag">Chart.js</span>
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+            </div>
+            <div class="project-links">
+              <a href="https://glitchedfelix.github.io/FleetLedger-Demo/" target="_blank" class="proj-link primary">Live Demo &rarr;</a>
+              <a href="https://github.com/GlitchedFelix/FleetLedger-Demo" target="_blank" class="proj-link ghost">GitHub</a>
+            </div>
           </div>
-          <div class="project-links">
-            <a href="https://glitchedfelix.github.io/FleetLedger-Demo/" target="_blank" class="proj-link primary">Live Demo &rarr;</a>
-            <a href="https://github.com/GlitchedFelix/FleetLedger-Demo" target="_blank" class="proj-link ghost">GitHub</a>
-          </div>
+
         </div>
-
       </div>
-    </div>
 
-         </section>
+      <!-- ── Websites ── -->
+      <div class="projects-group">
+        <p class="subsection-label reveal">Websites</p>
+        <div class="projects-grid">
+
+          <!-- Graphic Designer Portfolio -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-top">
+              <span class="project-type-badge badge-web">Website</span>
+            </div>
+            <h3 class="project-title">Graphic Designer's Portfolio</h3>
+            <p class="project-desc">
+              A clean, mobile-first portfolio page built to showcase a graphic designer's work,
+              with a focus on simplicity and visual impact. Responsive layout built with Bootstrap 5.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">Bootstrap 5</span>
+              <span class="stack-tag">AI-Assisted</span>
+            </div>
+            <div class="project-links">
+              <a href="https://amorei-botes-portfolio.netlify.app/" target="_blank" class="proj-link primary">View Portfolio →</a>
+            </div>
+          </div>
+
+          <!-- MeToMe Electric -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-top">
+              <span class="project-type-badge badge-web">Website</span>
+            </div>
+            <h3 class="project-title">MeToMe Electric — Business Website</h3>
+            <p class="project-desc">
+              Full business website for MeToMe Electric PTY LTD, a CIPC-registered solar installation
+              and electrical contractor based in Kempton Park, Gauteng. SEO-optimised, mobile-first,
+              covering services including hybrid solar PV, generator backup, DB board upgrades, and
+              commercial battery storage.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML5</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">SEO</span>
+              <span class="stack-tag">Mobile-First</span>
+            </div>
+            <div class="project-links">
+              <a href="https://metelectric.co.za" target="_blank" class="proj-link primary">Live Site →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ── CONTACT ── -->
   <section id="contact">
